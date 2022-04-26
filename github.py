@@ -40,11 +40,11 @@ def display_values_from_dict(dictname):
     print("Display values for dict: ")
     print(str(dictname.values()))
 
+
 if __name__ == "__main__":
+
     python_version()
-
     branches_response_dict = github_api_request("octocat", "Hello-World", "branches")
-
     display_keys_from_dict(branches_response_dict)
     display_values_from_dict(branches_response_dict)
 
@@ -57,5 +57,4 @@ if __name__ == "__main__":
     print("\nDisplay protected status of all branches for all keys in the dictionary.")
     display_values_from_key_of_dict_list(branches_response_dict, "protected")
     
-
 
