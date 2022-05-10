@@ -3,17 +3,13 @@
 import requests
 import json
 
-
 #Our github api general api request function
-
 
 def github_api_request(owner, repo, cmd):
     request = "https://api.github.com/repos/" + owner + '/' + repo + '/' + cmd
     response = requests.get(request)
-    #always a dictionary list from json.loadstring
+    #We always a dictionary list from json.loadstring
     dictlist = json.loads(response.text)
-
-    #print regular dictlist
     print("orginal dict structure: " + str(dictlist))
     #Now convert this into an enumberated dictionary list
     #enumberate our keys
