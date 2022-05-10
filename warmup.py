@@ -30,6 +30,9 @@ def get_object_from_json(json, object_name):
     return json[object_name]
 
 
+def get_value_from_json(json_object,json_key):
+    return json_object[json_key]
+
 
 if __name__ == "__main__":
 
@@ -37,7 +40,7 @@ if __name__ == "__main__":
     repo = "hello-World"
     cmd = "branches"
     object_name = "commit"
-
+    json_key = "url"
 
     jsondict = github_api_request(owner, repo, cmd)
 
@@ -47,3 +50,8 @@ if __name__ == "__main__":
         json_object =  get_object_from_json(json, object_name)
         print("JSON dictionary index " + str(key))
         print("JSON Object: " + str(json_object))
+        json_value = get_value_from_json(json_object, json_key)
+        print("JSON key: " + json_key)
+        print("JSON value: " + json_value)
+
+
