@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 #github API stuff i've written
+#
+# https://docs.github.com/en/rest
+#
 
 import os
 import subprocess
